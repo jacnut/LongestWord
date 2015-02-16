@@ -1,0 +1,41 @@
+<h1>Welcome to the word-game!</h1>
+<br>
+<br>
+<h4>Here is your grid :
+  <%= @generate_grid %> </h4>
+<br>
+<br>
+
+
+<form action="/score">
+  <label for="question">What's your best shot ?</label><br>
+  <input type="text" id="question" name="user_answer" placeholder="Your answer here">
+  <input type="hidden" name="grid" value="<%=@generate_grid%>">
+  <input type="hidden" name="start_time" value="<%=@start_time%>">
+  <input type="submit" value="Go on!" class ="btn btn-primary">
+</form>
+<!--
+puts "******** Welcome to the longest word-game !********"
+puts "Here is your grid :"
+grid = generate_grid(9)
+puts grid.join(" ")
+puts "*****************************************************"
+
+puts ""
+start_time = Time.now
+attempt = gets.chomp
+end_time = Time.now
+
+puts "******** Now your result ********"
+
+result = run_game(attempt, grid, start_time, end_time)
+
+puts "Your word: #{attempt}"
+puts "Time Taken to answer: #{result[:time]}"
+puts "Translation: #{result[:translation]}"
+puts "Your score: #{result[:score]}"
+puts "Message: #{result[:message]}"
+
+puts "*****************************************************" -->
+
+
